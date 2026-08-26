@@ -1,0 +1,74 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{misc-macros}[2023/07/24 A package for quickly typesetting formal letters]
+
+\RequirePackage{fontspec}
+\RequirePackage{mathsettings}
+\RequirePackage{geometry}
+\RequirePackage[calc,showdow,english]{datetime2}
+\RequirePackage{tfrupee}
+\RequirePackage{lastpage}
+\RequirePackage{fancyhdr}
+\RequirePackage{layout}
+\RequirePackage{makecell}
+\RequirePackage[none]{hyphenat}
+\RequirePackage{longtable}
+\RequirePackage{arydshln}
+\RequirePackage{pifont}
+\RequirePackage{graphicx}
+% \RequirePackage{nicematrix}   % Removed due to table header lines issue
+\RequirePackage{xcolor}
+\RequirePackage{makecell}
+\RequirePackage{tablefootnote}
+\RequirePackage{xstring}
+\RequirePackage[super]{nth}  % https://tex.stackexchange.com/a/4119/200495
+\RequirePackage{setspace}
+
+% -----------------------------------------------------------------
+% CUSTOMISE DATE FORMAT IN \today
+% -----------------------------------------------------------------
+\DTMnewdatestyle{mydateformat}{%
+	%	
+	\renewcommand{\DTMdisplaydate}[4]{%
+		\nth{\DTMtwodigits{##3}}\nobreakspace % DD
+		\DTMmonthname{##2}\nobreakspace  %   MMM
+		\number##1                       %   YYYY
+	}%
+	\renewcommand{\DTMDisplaydate}{\DTMdisplaydate}%
+}
+
+\DTMsetdatestyle{mydateformat}
+
+% ----------------------------------------------------------------
+
+\setlength{\parindent}{0pt}
+\newgeometry{top=2cm,
+	bottom=2.5cm,
+	left=2.5cm,
+	right=2.5cm
+}
+
+\renewcommand{\arraystretch}{1.5}
+
+\newenvironment{tabmini}[1][2mm]{\begin{minipage}{\linewidth}\raggedright\vspace{#1}\def\spacing{#1}}{\vspace{\spacing}\end{minipage}}
+
+\fancyhf{}  % https://tex.stackexchange.com/a/13897/200495
+\renewcommand{\headrulewidth}{0pt}
+
+\fancypagestyle{nofooter}{%
+	\fancyfoot{}%
+}
+
+\fancypagestyle{frontmatter}{%
+	\fancyfoot{}%
+	\pagenumbering{roman}
+	\fancyfoot[C]{\thepage}
+}
+
+\fancypagestyle{regular}{%
+	\fancyfoot{}%
+	\pagenumbering{arabic}%
+	\fancyfoot[C]{\footnotesize Page \thepage\ of \pageref*{LastPage}}
+}
+
+\pagestyle{regular}
+

@@ -1,0 +1,49 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mathsettings}[2021/09/06 Math settings package]
+
+\RequirePackage{amssymb}
+\RequirePackage{mathtools}
+\RequirePackage{physics}
+\RequirePackage{array}     % For extended column definitions 
+\RequirePackage{multirow}  % For merging rows
+\RequirePackage{xcolor}
+\RequirePackage{cases}     % Provides numcases and subnumcases environments
+\RequirePackage{soul}	     % Provides \ul{} command for breaking underline
+\RequirePackage{accents}
+\RequirePackage{emptypage}
+\RequirePackage{graphicx}
+\RequirePackage{siunitx}
+\RequirePackage{scalerel}  % Eg.: $V_{\scaleto{CC}{4pt}}$
+\RequirePackage{centernot} % To cancel out expressions (better than cancel package)
+\RequirePackage{enumitem}
+\RequirePackage{tabularx}
+\RequirePackage{makecell}
+% \RequirePackage[none]{hyphenat}  % PLEASE IMPORT THIS IN YOUR PROJECT MAIN FILE. Not all projects will want this; hence it has been disabled.
+\RequirePackage{xparse}    		% Added 4th Jan. 2025.
+\RequirePackage{setspace}  		% Added March 9th, 2025.
+\RequirePackage{tablefootnote}  % Added Sept. 27, 2025
+\RequirePackage{xstring}  		% Added Sept. 27, 2025
+\RequirePackage[super]{nth}  	% https://tex.stackexchange.com/a/4119/200495 ; Added Sept. 27, 2025
+\RequirePackage{caption}  		% Added Sept. 27, 2025
+\RequirePackage{microtype}      % Added Sept. 27, 2025
+
+\RequirePackage[colorlinks=true,
+linkcolor=blue,
+urlcolor=blue,
+citecolor=blue,
+linktoc=page,
+unicode=true]{hyperref}
+
+\newcolumntype{C}{>{$}c<{$}} % Math mode in table column, centre-aligned
+\newcolumntype{L}{>{$}l<{$}} % Math mode in table column, left-aligned
+\newcolumntype{R}{>{$}r<{$}} % Math mode in table column, right-aligned
+
+\newcommand{\dint}{\int\limits}
+\newcommand{\dsum}{\sum\limits}
+\newcommand{\dprod}{\prod\limits}
+\newcommand{\tendsto}{\ensuremath{\rightarrow}}
+\newcommand{\e}[1]{\ensuremath{\mathrm{e}^{#1}}}
+
+\newcommand{\bfnt}[1]{{\bfseries #1}}
+\newcommand{\ifnt}[1]{{\itshape #1}}
+

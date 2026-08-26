@@ -1,0 +1,194 @@
+\documentclass[a4paper, 11pt]{article}
+
+\usepackage{misc-macros}
+\usepackage{tabularx}
+\usepackage{caption}
+
+\setmainfont{C059}
+\setmonofont{Jet Brains Mono}[Ligatures=TeX, Scale=MatchLowercase]
+
+\begin{document}
+	
+	\thispagestyle{empty}
+	
+	\begin{center}
+		
+		\setstretch{2}
+		
+		\vspace*{1.5cm}
+		
+		{\huge\bfseries \ifnt{Among the Canopy}\\[2em]
+			An Educational Visit to Karnala Bird Sanctuary and Yusuf Meherally Center }
+		
+		\vspace*{3cm}
+		
+		\LARGE \ul{Date of visit}: \nth{22} August 2026.\\[1em]
+		\ul{Date of report}: \today.\\
+		
+		\vfill
+		
+		{\setstretch{1}
+		
+		\bfnt{Wrichik Basu}\\
+		SY BSc CS\\
+		\texttt{SCS2627067}\\}
+		
+		
+	\end{center}
+	
+	\clearpage
+	
+	\setcounter{page}{1}
+	\pagestyle{frontmatter}
+	
+	\tableofcontents
+	
+	\clearpage
+	
+	\setcounter{page}{1}
+	\pagestyle{regular}
+	
+	\newgeometry{top=1.5cm, left=1.5cm, right=1.5cm, bottom=2cm}
+	
+	\section{Itinerary}
+	
+		\begin{center}
+			\includegraphics[width=0.9\textwidth]{group_photo_entrance.jpg}
+			\captionof{figure}{Group photo taken at the entrance of the Karnala Bird Sanctuary.}
+		\end{center}
+		
+		The education field excursion was arranged under the leadership of Dr. Vishnuprasad, Head of Department, Dept. of Environmental Sciences. The itinerary followed was as follows:\\
+		
+		\begin{tabularx}{\textwidth}{l>{\raggedright\arraybackslash}X}
+			
+			06:45~AM & Arrival at college, signing the attendance register\\
+			
+			07:40~AM & Departure from college (delayed due to rain and delayed arrival of transport) \\
+			
+			09:40~AM & Arrival at Yusuf Meherally Center\\
+			
+			10:30~AM & Breakfast and tea over, heading to Karnala Bird Sanctuary after briefing\\
+			
+			11:00~AM & Reach gate of bird sanctuary\\
+			
+			11:40~AM & Start excursion after ticket purchase, bag checking, briefing by faculty about Do's and Don'ts inside the reserve forest\\
+			
+			02:00~PM & Exit from sanctuary, bag-check, travel back to Yusuf Meherally Center, lunch\\
+			
+			03:20~PM & Start of guided trip of small-scale industries in Yusuf Meherally Center\\
+			
+			04:45~PM & End of tour, evening tea \& snacks\\
+			
+			05:40~PM & Bid adieu to Yusuf Meherally Center and the greenery\\
+			
+			07:40~PM & Drop at college.
+			
+		\end{tabularx}
+	
+	\section{Karnala Bird Sanctuary}
+	
+	\begin{center}
+		\includegraphics[width=0.7\textwidth]{karnala_entrance.jpg}
+		\captionof{figure}{Inside the gates of Karnala Bird Sanctuary.}
+	\end{center}
+	
+	The Karnala Bird Sanctuary is located on NH~66, in the Panvel taluk of Raigad (erstwhile Raigarh) district of Maharashtra, around \SI{54}{km} from Mumbai. The area is centred around the Karnala Fort, and occupies an area of \SI{12.11}{sq. km}.\\
+	
+	Survey of India maps this area under the topographic map \texttt{47F/1} or Open Series Map \texttt{E43H1}. The area has been demarcated as a Reserve Forest, though current official records categorises the area as IUCN category -- IV (habitat/species management area). The relevant portion of the topo map can be seen in figure~\ref{fig:topo}. The calculated latitude and longitude of the officially demarcated entrance of the Wildlife Sanctuary is $\ang{18;53;41.604}N$, $\ang{73;6;54.0822}E$. The ruins of the Karnala Fort bear coordinates $\ang{18;52;55.5744}N$, $\ang{73;7;0.9144}E$. These, along with the contours of this region, are in figure~\ref{fig:topo}.\\
+	
+	The sanctuary, though small in area, is home to over 222 species of birds, of which 161 are resident species. The following species endemic to the Western Ghats have been found here:%
+	%	
+	\begin{enumerate}
+		
+		\item \ifnt{Treron affinis} (grey-fronted green pigeon);
+		
+		\item \ifnt{Columba elphinstonii} (Nilgiri woodpigeon);
+		
+		\item \ifnt{Pisttacula columbodies} (Malabar blue-winged parakeet);
+		
+		\item \ifnt{Ocyceros griseus} (Malabar grey hornbill);
+		
+		\item \ifnt{Megalamia viridis} (white-cheeked barbet);
+		
+		\item \ifnt{Galerida malabarica} (Malabar lark);
+		
+		\item \ifnt{Leptocoma minima} (Small Sunbird); and 
+		
+		\item \ifnt{Aethopyga vigorsii} (Vigor's Sunbird).
+		
+	\end{enumerate}
+	
+	The Sanctuary is also an Important Bird Area (IBA) satisfying A1 (Globally threatened species) and A2 (Restricted-range species) criteria. The sanctuary is also home to 114 species of butterflies.
+	
+	\begin{center}
+		\begin{minipage}{0.45\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{karnala_topo.png}
+		\end{minipage}\hfill%
+		\begin{minipage}{0.5\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{map_export.png}
+		\end{minipage}
+		
+		\captionof{figure}[test]{\label{fig:topo}Left: Karnala Bird Sanctuary and Karnala Fort on topo map no. \texttt{47F/1} a.k.a. OSM no. \texttt{E43H1}. Right: Same region on QGIS software. The district information has been taken from GADM.org\footnotetext{\url{https://gadm.org/download_country.html}}; natural area layer is from BBBike extract\footnote{\url{https://download2.bbbike.org/osm/extract/planet_73.02,18.817_73.237,18.965.osm.shp.zip}}. Due to the National Map Policy of 2005, Open Series maps published by the Survey of India do not have contours, citing restrictions due to national security. Contour data has hence been extracted from OpenTopography\footnote{\url{https://opentopography.org/}}. The OSM Index has been taken from Survey of India\footnote{\url{https://onlinemaps.surveyofindia.gov.in/FreeMapSpecification.aspx}}}
+	\end{center}
+	
+		\subsection{Objectives of visit}
+		
+		\begin{itemize}
+			
+			\item \bfnt{Biodiversity and ecosystem study:} The sanctuary is a patch of moist deciduous and semi-evergreen forest in the Western Ghats foothills. This lets students see how a forest ecosystem functions as a whole, including the interdependence of flora and fauna, food chains and food webs, and the role of habitat in supporting species.
+			
+			\item \bfnt{Ornithological study:} Karnala is known primarily as a bird sanctuary, so the central purpose is observing avian diversity in a natural setting. Students can learn field identification of resident and migratory species, study bird behaviour, calls, feeding patterns, and nesting, and understand the difference between observing birds in the wild versus reading about them.
+			
+			\item \bfnt{Understanding conservation and protected areas:} A sanctuary is a legally protected area, so a visit teaches the purpose and functioning of such protected zones, the threats they face (habitat loss, human encroachment, poaching), and why conservation matters. It connects classroom concepts of environmental protection to a real, managed site.
+			
+			\item \bfnt{Field methodology and observation skills:} Trips like this train students in the practical side of science: recording observations, using binoculars and field guides, maintaining a field notebook, sketching or photographing specimens, and learning patience and discipline in data collection.
+			
+			\item \bfnt{Ecology and environmental awareness:} Direct exposure to a natural habitat builds sensitivity toward environmental issues and the value of the Western Ghats as a biodiversity hotspot. It reinforces concepts of sustainability and the human impact on ecosystems.
+			
+		\end{itemize}
+		
+		\subsection{Observations: Flora, fauna, and abiotic features}
+			
+		\begin{center}
+			\includegraphics[width=0.8\textwidth]{karnala_fort_nh66.png}
+			\captionof{figure}{Karnala Fort pinnacle seen from NH~66.}
+		\end{center}
+		
+		\begin{center}
+			\includegraphics[scale=0.05, angle=-90]{red_ant_hill.jpg}
+			\captionof{figure}{\label{fig:ant_hill}Red ant hill.}
+		\end{center}
+		
+		A few feet from the gate, the team first spotted a red ant hill, visible in image~\ref{fig:ant_hill}.\\
+		
+		On the walls of an adjoining enclosure, we spotted \bfnt{\ifnt{Adiantum}}, a.k.a. Maidenhair fern. Under the old classification system, these are pteridophytes, though pteridophyta is no longer a valid taxon. As per the modern classification, we have Embryophyta\ \textrightarrow\ Tracheophyta, which further subdivides into two groups:%
+%		
+		\begin{enumerate}
+			
+			\item Lycopodiophyta; and
+			
+			\item Euphyllophyta, which further splits into:%
+%			
+			\begin{enumerate}[label={(\alph*)}]
+				
+				\item Polypodiophyta, under which \ifnt{Adiantum} comes, and
+				
+				\item Spermatophyta, which includes all seed plants.
+				
+			\end{enumerate}
+			
+		\end{enumerate}
+		
+		Following PPG~I (2016), the exact classification goes as follows:\\
+		
+		Eukarya\ \textrightarrow\ Archaeplastida\ \textrightarrow\ Viridiplantae\ \textrightarrow\ Streptophyta\ \textrightarrow Embryophyta\ \textrightarrow\ Tracheophyta\ \textrightarrow\ Euphyllophyta\ \textrightarrow\ Polypodiophyta\ \textrightarrow\ Polypodiidae\ \textrightarrow\ Polypodiales\ \textrightarrow\ Pteridaceae\ \textrightarrow\ Vittarioideae\ \textrightarrow\ \ifnt{Adiantum sp.}
+		
+		\begin{center}
+			\includegraphics[width=0.8\textwidth]{fern_moss.jpg}
+			\captionof{figure}{\ifnt{Adiantum sp.}, along with moss on the wall.}
+		\end{center}
+	
+	
+\end{document}
