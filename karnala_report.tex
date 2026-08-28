@@ -3,6 +3,9 @@
 \usepackage{misc-macros}
 \usepackage{tabularx}
 \usepackage{caption}
+\usepackage[bottom]{footmisc}
+
+\newcounter{capfn}
 
 \setmainfont{C059}
 \setmonofont{Jet Brains Mono}[Ligatures=TeX, Scale=MatchLowercase]
@@ -42,6 +45,7 @@
 	\pagestyle{frontmatter}
 	
 	\tableofcontents
+	\listoffigures
 	
 	\clearpage
 	
@@ -128,7 +132,26 @@
 			\includegraphics[width=\linewidth]{map_export.png}
 		\end{minipage}
 		
-		\captionof{figure}[test]{\label{fig:topo}Left: Karnala Bird Sanctuary and Karnala Fort on topo map no. \texttt{47F/1} a.k.a. OSM no. \texttt{E43H1}. Right: Same region on QGIS software. The district information has been taken from GADM.org\footnotetext{\url{https://gadm.org/download_country.html}}; natural area layer is from BBBike extract\footnote{\url{https://download2.bbbike.org/osm/extract/planet_73.02,18.817_73.237,18.965.osm.shp.zip}}. Due to the National Map Policy of 2005, Open Series maps published by the Survey of India do not have contours, citing restrictions due to national security. Contour data has hence been extracted from OpenTopography\footnote{\url{https://opentopography.org/}}. The OSM Index has been taken from Survey of India\footnote{\url{https://onlinemaps.surveyofindia.gov.in/FreeMapSpecification.aspx}}}
+		\setcounter{capfn}{\value{footnote}}%
+		\captionof{figure}[Karnala on topo map]{\label{fig:topo}%
+			Left: Karnala Bird Sanctuary and Karnala Fort on topo map no.\ \texttt{47F/1}
+			a.k.a. OSM no.\ \texttt{E43H1}. Right: Same region on QGIS software.
+			The district information has been taken from
+			GADM.org\footnotemark[\numexpr\value{capfn}+1\relax];
+			natural area layer is from BBBike
+			extract\footnotemark[\numexpr\value{capfn}+2\relax].
+			Due to the National Map Policy of 2005, Open Series maps published by the
+			Survey of India do not have contours, citing restrictions due to national
+			security. Contour data has hence been extracted from
+			OpenTopography\footnotemark[\numexpr\value{capfn}+3\relax].
+			The OSM Index has been taken from Survey of
+			India\footnotemark[\numexpr\value{capfn}+4\relax].}%
+		%
+		\stepcounter{capfn}\footnotetext[\value{capfn}]{\url{https://gadm.org/download_country.html}}%
+		\stepcounter{capfn}\footnotetext[\value{capfn}]{\url{https://download2.bbbike.org/osm/extract/planet_73.02,18.817_73.237,18.965.osm.shp.zip}}%
+		\stepcounter{capfn}\footnotetext[\value{capfn}]{\url{https://opentopography.org/}}%
+		\stepcounter{capfn}\footnotetext[\value{capfn}]{\url{https://onlinemaps.surveyofindia.gov.in/FreeMapSpecification.aspx}}%
+		\setcounter{footnote}{\value{capfn}}%
 	\end{center}
 	
 		\subsection{Objectives of visit}
@@ -224,7 +247,7 @@
 		
 		\begin{center}
 			\includegraphics[width=0.6\textwidth]{Kailashpati.jpg}
-			\captionof{figure}{\ifnt{Couroupita guianensis} -- the Kailashpati tree, a.k.a. the Kaurav Pandav flower. A small Shivling type structure seen inside the flower. Very fragrant. Fruits are known as cannon ball. Directly arises from the main trunk so called as cauliflorous.}
+			\captionof{figure}[\ifnt{Couroupita guianensis} -- Kailashpati]{\ifnt{Couroupita guianensis} -- the Kailashpati tree, a.k.a. the Kaurav Pandav flower. A small Shivling type structure seen inside the flower. Very fragrant. Fruits are known as cannon ball. Directly arises from the main trunk so called as cauliflorous.}
 			
 			\vspace*{1.2cm}
 			
@@ -244,15 +267,52 @@
 		
 		\begin{center}
 			\includegraphics[width=0.4\textwidth]{ginger.jpg}
-			\captionof{figure}{Wild ginger, \ifnt{Curcuma pseudomontana}. The broad, oblong-elliptic leaf with a strong midrib and dense, parallel lateral veis running out to the margin at a narrow angle, and the sheathing leaf bases forming a pseudostem are all indicative of the ginger family, Zingiberaceae: Angiospermae\ \ \textrightarrow\ \ monocots\ \ \textrightarrow\ \ commelinids\ \ \textrightarrow\ \ Zingiberales\ \ \textrightarrow\ \ Zingiberaceae. The pink structures at the centre are not petals but bracts, and in \ifnt{Curcuma}, the upper sterile bracts form a brightly coloured coma while the true flowers sit lower down in the axils of the green bracts. The fact that it flowers with the first rains and was found in the western ghats is highly suggestive of the species \ifnt{Curcuma pseudomontana}.}
+			\captionof{figure}[Wild ginger, \ifnt{Curcuma pseudomontana}]{Wild ginger, \ifnt{Curcuma pseudomontana}. The broad, oblong-elliptic leaf with a strong midrib and dense, parallel lateral veis running out to the margin at a narrow angle, and the sheathing leaf bases forming a pseudostem are all indicative of the ginger family, Zingiberaceae: Angiospermae\ \ \textrightarrow\ \ monocots\ \ \textrightarrow\ \ commelinids\ \ \textrightarrow\ \ Zingiberales\ \ \textrightarrow\ \ Zingiberaceae. The pink structures at the centre are not petals but bracts, and in \ifnt{Curcuma}, the upper sterile bracts form a brightly coloured coma while the true flowers sit lower down in the axils of the green bracts. The fact that it flowers with the first rains and was found in the western ghats is highly suggestive of the species \ifnt{Curcuma pseudomontana}.}
 			
 			\vspace*{1cm}
 			
 			\includegraphics[width=0.5\textwidth]{banana.jpg}
-			\captionof{figure}{\ifnt{Ensete sp.} Belongs to the same order as \ifnt{Curcuma}, but different family: Musaceae (Zingiberaceae: Angiospermae\ \ \textrightarrow\ \ monocots\ \ \textrightarrow\ \ commelinids\ \ \textrightarrow\ \ Musaceae). Identified from the leaf: a stout midrib with closely spaced parallel lateral veins running out at almost a right angle, unbranched, ending at the margin.}
+			\captionof{figure}[\ifnt{Ensete}]{\ifnt{Ensete} Belongs to the same order as \ifnt{Curcuma}, but different family: Musaceae (Zingiberaceae: Angiospermae\ \ \textrightarrow\ \ monocots\ \ \textrightarrow\ \ commelinids\ \ \textrightarrow\ \ Musaceae). Identified from the leaf: a stout midrib with closely spaced parallel lateral veins running out at almost a right angle, unbranched, ending at the margin.}
 		\end{center}
 		
+		\begin{center}
+			\includegraphics[width=0.6\textwidth]{Acalypha.jpg}
+			\captionof{figure}[\ifnt{Acalypha wilkesiana}]{\ifnt{Acalypha wilkesiana}. Placement: Angiospermae\ \ \textrightarrow\ \ eudicots\ \ \textrightarrow\ \ rosids\ \ \textrightarrow\ \ fabids\ \ \textrightarrow\ \ Malpighiales\ \ \textrightarrow\ \ Euphorbiaceae, subfamily Acalyphoideae. Leaf colouration is a typical feature. Flowers appear as long inflorescences, resembling the tail of a cat. Hence called catkin inflorescence.}
+			
+			\vspace{0.5cm}
+			
+			\includegraphics[width=0.6\textwidth]{Cordyline.jpg}
+			\captionof{figure}[\ifnt{Cordyline fruticosa}]{\ifnt{Cordyline fruticosa}, the ti plant. Rarely seen in the wild. The red here is anthocyanin accumulating in the epidermis and mesophyll, overlying perfectly functional chlorophyll. The leaves photosynthesise normally. Placement: Angiospermae\ \ \textrightarrow\ \ monocots\ \ \textrightarrow\ \ Asparagales\ \ \textrightarrow\ \ Asparagaceae\ \ \textrightarrow\ \ subfamily Lomandroideae. \ifnt{Cordyline} has been shuffled around more than most plants. It has been placed in Liliaceae, Agavaceae, Dracaenaceae and Laxmanniaceae at various times. APG IV consolidated a large number of these small families into a broadly defined Asparagaceae with seven subfamilie. It is a monocot with a woody stem. Monocots have no vascular cambium and normally cannot thicken their stems. \ifnt{Cordyline}, \ifnt{Dracaena}, \ifnt{Yucca} and \ifnt{Aloe} get around this with a secondary thickening meristem, a distinct meristem outside the vascular bundles that produces whole new bundles embedded in parenchyma.}
+			
+			\includegraphics[width=0.6\textwidth]{Hellenia.jpg}
+			\captionof{figure}[Crepe ginger or spiral ginger, \ifnt{Hellenia speciosa}]{\protect Crepe ginger or spiral ginger, \ifnt{Hellenia speciosa}. The species name has moved three times. It was originally \ifnt{Costus speciosus}, but was transferred to \ifnt{Cheilocostus speciosus} in 2006, and the currently accepted name in Plants of the World Online\footnotemark is \ifnt{Hellenia speciosa}, with \ifnt{Costus speciosus} and \ifnt{Cheilocostus speciosus} both listed as synonyms. Costaceae now recognises \ifnt{Hellenia} Retz. as the accepted genus with \ifnt{Cheilocostus} as its synonym.}
+			
+			\footnotetext{\url{https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60469691-2}}
+			
+			\includegraphics[width=0.5\textwidth]{Gnetum.jpg}
+			\captionof{figure}[Cone of \ifnt{Gnetum}]{\label{fig:gnetum}A cone (primitive flower) of a gymnosperm named \ifnt{Gnetum}.}
+			
+		\end{center}
 		
+		Upon climbing the hill after the rain-fed spring, through the slippery rocks and mud in which our shoes were having a difficult time to find a grip on, we discovered the Gnetum tree. It is an advanced gymnosperm and closer to the modern day plants, angiosperms. Hence unlike many other gymnosperms having needle shaped leaves, these have broad leaves similar to angiosperms. Also considered as an evolutionary connecting link between gymnosperms and angiosperms.\\
+		
+		\ifnt{Gnetum} confused botanists for nearly a century. It carries a set of angiosperm-like characters that no other gymnosperm has:
+		
+		\begin{itemize}
+			
+			\item Broad, flat leaves with reticulate venation, opposite and decussate, looking exactly like a dicot leaf;
+			
+			\item Vessel elements in the xylem, absent from all other gymnosperms except \ifnt{Ephedra} and \ifnt{Welwitschia};
+			
+			\item A double fertilisation of sorts, where the second male gamete fuses with another nucleus, though it does not produce endosperm;
+			
+			\item Strobili sometimes described as flower-like, with a perianth-like envelope around the ovule;
+			
+			\item Absence of archegonia in \ifnt{Gnetum}, unusual among gymnosperms.
+			
+		\end{itemize}
+		
+		That combination led to the anthophyte hypothesis, which placed Gnetales as sister to angiosperms. Molecular data demolished it, however. Gnetales now come out inside or beside the conifers, and all those angiosperm-like features are convergent. The reticulate venation and the vessels evolved independently. This is one of the cleanest textbook cases of morphological convergence misleading classification for decades.
 	
 	
 \end{document}
